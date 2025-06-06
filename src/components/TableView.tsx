@@ -127,6 +127,9 @@ export const TableView = () => {
     <div className="view">
       <p>{"dv01 Loan Analysis"}</p>
       <p>{"Jack Brown | jack@jackbrown.io"}</p>
+      {!table.state.data && (
+        <div className="spinner"></div>
+      )}
       <div className="filters">
         {!!table.state.data && filterKeys.map(filterKey => (
           <div className="select">
@@ -158,7 +161,7 @@ export const TableView = () => {
           </tr>
           <tr>
             {grades.map(grade => (
-              <td>{`$${Number(totals[grade]?.toFixed(2)).toLocaleString('en-US') ?? " - "}`}</td>
+              <td>{`$${Number(totals[grade]?.toFixed(2) ?? 0).toLocaleString('en-US')}`}</td>
             ))}
           </tr>
         </tbody>
