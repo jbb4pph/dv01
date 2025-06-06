@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { TableDataContext } from '../App';
 import { TableCtx, TableData } from '../hooks/useTableData';
+import { LoanAnalysisChart } from './LoanAnalysisChart';
 
 type Options = {
   homeOwnership: string[]
@@ -162,6 +163,9 @@ export const TableView = () => {
           </tr>
         </tbody>
       </table>
+      {!!table.state.data && (
+        <LoanAnalysisChart totals={totals} />
+      )}
     </div>
   );
 }
