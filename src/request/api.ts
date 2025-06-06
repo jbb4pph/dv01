@@ -24,7 +24,7 @@ const parseData = (result, rawData) => {
   return rawData
 }
 
-const wait = ms => new Promise(res => {
+const wait = (ms: number): Promise<void> => new Promise(res => {
   setTimeout(() => res(), ms);
 });
 

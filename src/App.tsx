@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import './App.css'
 import { TableView } from './components'
 import { useTableData } from './hooks/useTableData';
 

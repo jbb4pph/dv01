@@ -1,5 +1,5 @@
 import React from 'react';
-import { getData } from '../request/api.js';
+import { getData } from '../request/api';
 
 export type TableData = {
   currentBalance: string
