@@ -1,0 +1,7 @@
+*.swp
+*.swo
+*.swn
+node_modules
+dist
+htdocs
+
