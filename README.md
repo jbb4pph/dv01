@@ -6,7 +6,6 @@ https://github.com/nvm-sh/nvm?tab=readme-ov-file#installing-and-updating
 nvm install v22.6.0
 npm install
 npx playwright install
-npx ts-jest config:init
 ```
 
 ### Usage
