@@ -76,6 +76,9 @@ export const useTableData = (): TableCtx => {
     loading: false
   });
 
+  /**
+   * Load the table data from the mock endpoint when the component mounts.
+   **/
   React.useEffect(() => {
     let canceled = false;
     const fetchData = async () => {

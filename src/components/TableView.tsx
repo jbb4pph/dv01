@@ -52,18 +52,24 @@ const spaced = (str: string) => str.replace(/([a-z])([A-Z])/g, '$1 $2');
  **/
 export const TableView = () => {
 
+  // Access to the global data.
   const table: TableCtx = React.useContext(TableDataContext);
+
   const [opts, setOpts] = useState<Options>(initOptions);
   const [filters, setFilters] = useState<Filters>(initFilters);
   const [totals, setTotals] = useState<GradeTotals>({});
 
   const grades = Object.keys(table?.state?.grades ?? {});
 
-  const applyFilters = (records: number[]) => {
+  /**
+   * Generates filter functions based on the current table filter state and applies
+   * them to the given records.
+   **/
+  const applyFilters = (records: number[]): number[] => {
     let next = [...records];
     const filterFns = filterKeys.flatMap(filterKey => {
       return (filters[filterKey] === "")
-        ? []
+        ? [] // Ignore unset filters
         : [(id: number) => table.state.data[id][filterKey]===filters[filterKey]];
     });
     for (const filter of filterFns) {
