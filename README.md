@@ -16,6 +16,8 @@ npm run start
 ```
 
 ### Tests
+IMPORTANT: The dev server must be running to use the Playwright E2E tests.
+
 Run all tests:
 ```
 npm run test
