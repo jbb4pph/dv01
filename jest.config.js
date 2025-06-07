@@ -12,5 +12,5 @@ module.exports = {
     '^.+\\.tsx?$': 'ts-jest',
   },
   moduleDirectories: ['node_modules', 'src'],
-  //testPathIgnorePatterns: ['/node_modules/', '/dist/', '/build/'],
+  testPathIgnorePatterns: ['/tests/']//['/node_modules/', '/dist/', '/build/'],
 };

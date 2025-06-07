@@ -138,6 +138,7 @@ export const TableView = () => {
             className={filters[filterKey]==="" ? "unset" : ""}
             key={filterKey}
             name={filterKey}
+            id={filterKey}
             onChange={onChangeFilter(filterKey)}
             value={filters[filterKey]}
           >
